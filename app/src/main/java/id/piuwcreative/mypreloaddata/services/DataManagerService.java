@@ -9,6 +9,7 @@ import android.os.IBinder;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -60,6 +61,7 @@ public class DataManagerService extends Service {
 
     @Override
     public boolean onUnbind(Intent intent) {
+        Log.i("test", "tes");
         loadData.cancel(true);
         return super.onUnbind(intent);
     }
